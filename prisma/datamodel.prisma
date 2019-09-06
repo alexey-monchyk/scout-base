@@ -11,7 +11,7 @@ type Movie {
   title: String!
   rating: Float!
   year: DateTime!
-  actors: [Actor!]!
+  actors: [Actor!]! @relation(name: "ActorOnMovie", onDelete: SET_NULL)
 }
 
 type Actor {
@@ -19,8 +19,8 @@ type Actor {
   name: String!
   birthday: DateTime!
   country: String!
-  movies: [Movie!]!
-  directors: [Director!]!
+  movies: [Movie!]! @relation(name: "ActorOnMovie", onDelete: SET_NULL)
+  directors: [Director!]! @relation(name: "ActorOnDirector", onDelete: SET_NULL)
 }
 
 type Director {
@@ -28,5 +28,5 @@ type Director {
   name: String!
   birthday: DateTime!
   country: String!
-  actors: [Actor!]!
+  actors: [Actor!]! @relation(name: "ActorOnDirector", onDelete: SET_NULL)
 }

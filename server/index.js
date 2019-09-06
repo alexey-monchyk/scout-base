@@ -1,20 +1,23 @@
-import { ApolloServer, PubSub } from 'apollo-server';
+import { ApolloServer } from 'apollo-server-express';
+import express from 'express';
 
 import prisma from './prisma';
 import typeDefs from './typeDefs';
 import { resolvers } from './resolvers';
 
-const pubsub = new PubSub();
+const app = express();
 
 const server = new ApolloServer({
   typeDefs,
   resolvers,
   context: {
     prisma,
-    pubsub,
   },
 });
 
-server.listen(4000).then(({ url }) => {
-  console.log(`Server ready at ${url}.`);
-})
+server.applyMiddleware({
+  app,
+  path: '/graphql'
+});
+
+export default app;

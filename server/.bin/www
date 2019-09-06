@@ -1,0 +1,10 @@
+import http from 'http';
+import application from '../';
+
+const server = http.createServer(application);
+const host = process.env.HOST || 'localhost';
+const port = process.env.PORT || 4000;
+
+server.listen(port, host, () => {
+  console.log(`Server listen on ${host}:${port}`);
+});
