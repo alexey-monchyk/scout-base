@@ -4,7 +4,7 @@ const movieMutations = {
       data: {
         ...data,
         actors: {
-          connect: data.actors.map(id => ({ id }))
+          connect: data.actors && data.actors.map(id => ({ id }))
         }
       }
     }, info);

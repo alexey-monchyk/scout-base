@@ -19,7 +19,7 @@ const director = gql`
   type Director {
     id: ID!
     name: String!
-    birthday: String!
+    birthday: DateTime!
     country: String!
     actors: [Actor!]!
   }

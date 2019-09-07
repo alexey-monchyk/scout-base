@@ -1,6 +1,8 @@
 import { gql } from 'apollo-server-express';
 
 const root = gql`
+  scalar DateTime
+
   type Query {
     root: String
   }

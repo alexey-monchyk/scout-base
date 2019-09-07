@@ -1,4 +1,5 @@
 import { GraphQLScalarType } from 'graphql';
+import { Kind } from 'graphql/language';
 
 const DateTime = new GraphQLScalarType({
   name: 'DateTime',
@@ -7,7 +8,7 @@ const DateTime = new GraphQLScalarType({
     return new Date(value);
   },
   serialize(value) {
-    return value.getTime();
+    return new Date(value);
   },
   parseLiteral(ast) {
     if (ast.kind === Kind.INT) {

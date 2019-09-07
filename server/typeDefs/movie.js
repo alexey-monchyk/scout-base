@@ -12,15 +12,17 @@ const movie = gql`
   input CreateMovieInput {
     title: String!
     rating: Float!
-    year: String!
+    scoutbase_rating: Float!
+    year: Int!
     actors: [ID!]
   }
 
   type Movie {
     id: ID!
     title: String!
+    scoutbase_rating: Float
     rating: Float!
-    year: String!
+    year: Int!
     actors: [Actor!]!
   }
 `;

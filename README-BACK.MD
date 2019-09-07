@@ -28,7 +28,7 @@ Instructions:
 }
 ```
 
-4. Add support for the following mutation:
+4. Add support for the following mutation: - V
 ```graphql
 mutation createUser($username: String, $password: String) {
   createUser(username: $username, password: $password) {
@@ -41,7 +41,7 @@ mutation createUser($username: String, $password: String) {
 }
 ```
 
-5. To expand on the number four, add a mutation-based authentication that accepts:
+5. To expand on the number four, add a mutation-based authentication that accepts: -V
 ```graphql
 mutation login($username: String, $password: String) {
   login(username: $username, password: $password) {

@@ -1,6 +1,8 @@
+import { getUserId } from '../services/auth.service';
+
 const movieQueries = {
-  async movies(parent, args, { prisma }, info) {
-    return await prisma.query.movies();
+  async movies(parent, args, { prisma, request }, info) {
+    return await prisma.query.movies(null, info);
   },
 };
 

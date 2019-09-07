@@ -13,14 +13,14 @@ const actor = gql`
     name: String!
     birthday: String!
     country: String!
-    movies: [ID!]
+    movies: [String!]
     directors: [ID!]
   }
 
   type Actor {
     id: ID!
     name: String!
-    birthday: String!
+    birthday: DateTime!
     country: String!
     movies: [Movie!]
     directors: [Director!]
