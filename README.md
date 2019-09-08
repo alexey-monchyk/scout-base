@@ -1,4 +1,7 @@
 # How to run a project
+  `Note:`
+   - Please download prisma globally for command prisma deploy.
+
   `For server:`
   1. docker-compose up -d
   2. prisma deploy
