@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "nodemon server/.bin/www --ext js,graphql --exec babel-node",
+    "start": "./node_modules/.bin/nodemon server/.bin/www --ext js,graphql --exec babel-node",
     "get-schema": "graphql get-schema -p prisma"
   },
   "dependencies": {
@@ -13,6 +13,7 @@
     "graphql": "^14.5.4",
     "graphql-cli": "^3.0.14",
     "jsonwebtoken": "^8.5.1",
+    "nodemon": "^1.19.2",
     "prisma-binding": "^2.3.15"
   }
 }
