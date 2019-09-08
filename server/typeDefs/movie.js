@@ -3,6 +3,7 @@ import { gql } from 'apollo-server-express';
 const movie = gql`
   extend type Query {
     movies: [Movie!]!
+    movie(id: ID!): Movie!
   }
 
   extend type Mutation {
