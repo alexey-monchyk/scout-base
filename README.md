@@ -1,18 +1,13 @@
 # How to run a project
-  `Note:`
-   - Please download prisma globally for command prisma deploy.
+  Note: `Please install docker on your computer.`
 
-  `For server:`
-  1. docker-compose up -d
-  2. prisma deploy
-  3. yarn run get-schema
-  4. yarn
-  5. yarn start
+  For running server and client just run command: `npm start` in root of application.
 
-  `For react app:`
-  1. cd client
-  2. yarn
-  3. yarn start
+  Endpoints:
+   - prisma: `localhost:4466`
+   - server: `localhost:4000/graphql`
+   - client: `localhost:3000`
+   - prisma-admin: `localhost:4466/_admin`
 
 # Code Challenge for Scoutbase
 

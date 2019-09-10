@@ -1,5 +1,5 @@
 # source: http://localhost:4466
-# timestamp: Sat Sep 07 2019 17:57:31 GMT+0300 (Eastern European Summer Time)
+# timestamp: Tue Sep 10 2019 10:56:43 GMT+0300 (Eastern European Summer Time)
 
 type Actor implements Node {
   id: ID!
