@@ -1,11 +1,11 @@
-import { ApolloServer } from 'apollo-server-express';
-import express from 'express';
-import dotenv from 'dotenv';
+const { ApolloServer } = require('apollo-server-express');
+const express = require('express');
+const dotenv = require('dotenv');
 
-import prisma from './prisma';
-import typeDefs from './typeDefs';
-import { resolvers } from './resolvers';
-import './seedDB';
+const prisma = require('./prisma');
+const typeDefs = require('./typeDefs');
+const { resolvers } = require('./resolvers');
+require('./seedDB')();
 
 const app = express();
 dotenv.config();
@@ -13,12 +13,10 @@ dotenv.config();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: (request) => {
-    return {
-      request,
-      prisma,
-    };
-  },
+  context: (request) => ({
+    request,
+    prisma,
+  }),
 });
 
 server.applyMiddleware({
@@ -26,4 +24,4 @@ server.applyMiddleware({
   path: '/graphql'
 });
 
-export default app;
+module.exports = app;

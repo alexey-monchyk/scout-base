@@ -1,4 +1,4 @@
-import { gql } from 'apollo-server-express';
+const { gql } = require('apollo-server-express');
 
 const movie = gql`
   extend type Query {
@@ -28,4 +28,4 @@ const movie = gql`
   }
 `;
 
-export default movie;
+module.exports = movie;

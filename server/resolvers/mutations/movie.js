@@ -13,4 +13,4 @@ const movieMutations = {
   },
 };
 
-export default movieMutations;
+module.exports = movieMutations;

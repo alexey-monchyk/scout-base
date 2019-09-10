@@ -4,4 +4,4 @@ const directorQueries = {
   }
 };
 
-export default directorQueries;
+module.exports = directorQueries;

@@ -1,4 +1,4 @@
-import { generateJWT } from '../services/jwt.service';
+const { generateJWT } = require('../services/jwt.service');
 
 const userMutations = {
   async createUser(parent, { data }, { prisma }, info) {
@@ -27,4 +27,4 @@ const userMutations = {
   },
 };
 
-export default userMutations;
+module.exports = userMutations;

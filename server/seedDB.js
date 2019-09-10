@@ -1,7 +1,7 @@
-import prisma from './prisma';
-import mutations from './resolvers/mutations';
-import query from './resolvers/queries';
-import seedData from './seedData';
+const prisma = require('./prisma');
+const mutations = require('./resolvers/mutations');
+const query = require('./resolvers/queries');
+const seedData = require('./seedData');
 
 async function asyncForEach(array, callback) {
   for (let index = 0; index < array.length; index++) {
@@ -9,7 +9,7 @@ async function asyncForEach(array, callback) {
   }
 }
 
-(async function() {
+module.exports = async () => {
   const actorsIds = {};
   const checkSeedUser = await query.user(null, { where: { username: 'seed' } }, { prisma }, '{ id, name }');
   
@@ -38,4 +38,4 @@ async function asyncForEach(array, callback) {
   } catch (err) {
     console.log(err);
   }
-})();
+};

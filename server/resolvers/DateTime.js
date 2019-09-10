@@ -1,5 +1,5 @@
-import { GraphQLScalarType } from 'graphql';
-import { Kind } from 'graphql/language';
+const { GraphQLScalarType } = require('graphql');
+const { Kind } = require('graphql/language');
 
 const DateTime = new GraphQLScalarType({
   name: 'DateTime',
@@ -18,4 +18,4 @@ const DateTime = new GraphQLScalarType({
   },
 });
 
-export default DateTime;
+module.exports = DateTime;

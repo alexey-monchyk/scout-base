@@ -13,4 +13,4 @@ const directorMutations = {
   }
 };
 
-export default directorMutations;
+module.exports = directorMutations;

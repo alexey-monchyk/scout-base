@@ -248,7 +248,7 @@ const seedUser = {
   birthday: '1990-10-03',
 };
 
-export default {
+module.exports = {
   movies,
   actors,
   directors,

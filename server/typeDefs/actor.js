@@ -1,4 +1,4 @@
-import { gql } from 'apollo-server-express';
+const { gql } = require('apollo-server-express');
 
 const actor = gql`
   extend type Query {
@@ -27,4 +27,4 @@ const actor = gql`
   }
 `;
 
-export default actor;
+module.exports = actor;

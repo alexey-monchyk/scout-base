@@ -1,6 +1,6 @@
-import { verifyJWT } from './jwt.service';
+const { verifyJWT } = require('./jwt.service');
 
-export const getUserId = ({ req }) => {
+exports.getUserId = ({ req }) => {
   const { authorization: token } = req.headers;
 
   if (!token) return null;

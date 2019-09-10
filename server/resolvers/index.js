@@ -1,9 +1,9 @@
-import { extractFragmentReplacements } from 'prisma-binding';
+const { extractFragmentReplacements } = require('prisma-binding');
 
-import Mutation from './mutations';
-import Query from './queries';
-import DateTime from './DateTime';
-import Movie from './Movie';
+const Mutation = require('./mutations');
+const Query = require('./queries');
+const DateTime = require('./DateTime');
+const Movie = require('./Movie');
 
 const resolvers = {
   Mutation,
@@ -12,6 +12,5 @@ const resolvers = {
   Movie,
 };
 
-const fragmentReplacements = extractFragmentReplacements(resolvers);
-
-export { resolvers, fragmentReplacements };
+exports.fragmentReplacements = extractFragmentReplacements(resolvers);
+exports.resolvers = resolvers;

@@ -4,4 +4,4 @@ const actorQueries = {
   },
 };
 
-export default actorQueries;
+module.exports = actorQueries;

@@ -1,4 +1,4 @@
-import { gql } from 'apollo-server-express';
+const { gql } = require('apollo-server-express');
 
 const root = gql`
   scalar DateTime
@@ -12,4 +12,4 @@ const root = gql`
   }
 `;
 
-export default root;
+module.exports = root;

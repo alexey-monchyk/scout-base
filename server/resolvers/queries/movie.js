@@ -9,4 +9,4 @@ const movieQueries = {
   }
 };
 
-export default movieQueries;
+module.exports = movieQueries;

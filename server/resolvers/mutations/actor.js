@@ -16,4 +16,4 @@ const actorMutations = {
   },
 };
 
-export default actorMutations;
+module.exports = actorMutations;

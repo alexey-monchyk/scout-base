@@ -1,7 +1,7 @@
-import userMutations from './user';
-import actorMutations from './actor';
-import directorMutations from './director';
-import movieMutations from './movie';
+const userMutations = require('./user');
+const actorMutations = require('./actor');
+const directorMutations = require('./director');
+const movieMutations = require('./movie');
 
 const Mutation = {
   ...userMutations,
@@ -10,4 +10,4 @@ const Mutation = {
   ...movieMutations,
 };
 
-export default Mutation;
+module.exports = Mutation;

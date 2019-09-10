@@ -1,4 +1,4 @@
-import { gql } from 'apollo-server-express';
+const { gql } = require('apollo-server-express');
 
 const director = gql`
   extend type Query {
@@ -25,4 +25,4 @@ const director = gql`
   }
 `;
 
-export default director;
+module.exports = director;

@@ -1,9 +1,9 @@
-import root from './root';
-import user from './user';
-import actor from './actor';
-import director from './director';
-import movie from './movie';
+const root = require('./root');
+const user = require('./user');
+const actor = require('./actor');
+const director = require('./director');
+const movie = require('./movie');
 
 const schemaArray = [root, user, actor, director, movie];
 
-export default schemaArray;
+module.exports = schemaArray;

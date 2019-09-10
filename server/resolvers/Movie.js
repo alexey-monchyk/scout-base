@@ -1,4 +1,4 @@
-import { getUserId } from './services/auth.service';
+const { getUserId } = require('./services/auth.service');
 
 const Movie = {
   scoutbase_rating(parent, args, { request }, info) {
@@ -10,4 +10,4 @@ const Movie = {
   }
 };
 
-export default Movie;
+module.exports = Movie;

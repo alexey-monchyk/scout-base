@@ -1,5 +1,5 @@
-import http from 'http';
-import application from '../';
+const http = require('http');
+const application = require('../');
 
 const server = http.createServer(application);
 const host = process.env.HOST || 'localhost';
