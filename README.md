@@ -2,6 +2,7 @@
   Note: `Please install docker on your computer.`
 
   For running server and client just run command: `npm start` in root of application.
+  You don't need to install dependencies in client and root folders.
 
   Endpoints:
    - prisma: `localhost:4466`
